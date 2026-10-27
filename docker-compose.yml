@@ -1,0 +1,15 @@
+# Quick deployment: docker compose up --build   ->  http://localhost:8080
+services:
+  backend:
+    build: ./backend
+    env_file: ./backend/.env
+    environment:
+      CORS_ORIGINS: http://localhost:8080
+      DATABASE_URL: sqlite:////data/varsha.db
+    volumes: ["varsha-data:/data"]
+  frontend:
+    build: ./frontend
+    ports: ["8080:80"]
+    depends_on: [backend]
+volumes:
+  varsha-data:

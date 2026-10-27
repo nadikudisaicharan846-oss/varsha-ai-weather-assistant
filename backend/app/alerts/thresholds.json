@@ -1,0 +1,8 @@
+{
+  "rain": {"info_mm": 15.6, "info_prob": 50, "advisory_mm": 35, "advisory_prob": 60, "warning_mm": 64.5, "severe_mm": 115.6},
+  "heat": {"info_c": 38, "advisory_c": 40, "warning_c": 43, "severe_c": 45},
+  "thunderstorm": {"warning_code": 95, "severe_codes": [96, 99], "advisory_if_prob_below": 40},
+  "wind": {"advisory_gust_kmh": 40, "warning_gust_kmh": 60, "severe_gust_kmh": 90},
+  "flood": {"advisory_3day_mm": 100, "warning_3day_mm": 150, "severe_3day_mm": 250},
+  "fog": {"advisory_visibility_km": 1.0, "warning_visibility_km": 0.2}
+}

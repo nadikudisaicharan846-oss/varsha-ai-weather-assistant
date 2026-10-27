@@ -1,0 +1,21 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root { --bg:#eef4fb; --card:#ffffff; --fg:#0f172a; --muted:#475569; --ring:#d5deea; --accent:#0369a1; }
+.dark { --bg:#0b1220; --card:#121c30; --fg:#e8eef8; --muted:#a3b3cb; --ring:#243452; --accent:#38bdf8; }
+
+body { background: var(--bg); color: var(--fg);
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", "Noto Sans Telugu", "Noto Sans Devanagari", sans-serif; }
+.card { background: var(--card); border-radius: 1rem; box-shadow: 0 0 0 1px var(--ring); }
+.muted { color: var(--muted); }
+.field { background: var(--card); color: var(--fg); border: 1px solid var(--ring); border-radius: .75rem; padding: .6rem .9rem; }
+.field:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+.btn { border-radius: .75rem; padding: .6rem 1rem; font-weight: 600; }
+.btn-primary { background: #0369a1; color: #fff; }
+.btn-primary:hover { background: #075985; }
+.btn-ghost { background: var(--card); color: var(--fg); box-shadow: 0 0 0 1px var(--ring); }
+.btn-ghost:hover { filter: brightness(.97); }
+button:focus-visible, a:focus-visible, select:focus-visible, input:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+button:disabled { opacity: .5; cursor: not-allowed; }
+.scroll-thin::-webkit-scrollbar { height: 6px; width: 6px; } .scroll-thin::-webkit-scrollbar-thumb { background: var(--ring); border-radius: 9px; }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
